@@ -125,11 +125,11 @@ Create this file inside your Creator resource:
 qs-robberies-creator/server/custom/nodes/tablet_start.lua
 ```
 
-Paste the complete code from the README section "2. Creator custom node" into that file.
+Paste the complete `tablet_start.lua` file from the `bxnde-robberies-tablet` resource
 
 ### Step 3: Ensure the File Loads
 
-Check your Creator's `fxmanifest.lua`. If it does not automatically load files under `server/custom/nodes/`, add:
+Check your Creator's (for example the qs-robberies-creator) `fxmanifest.lua`. If it does not automatically load files under `server/custom/nodes/`, add:
 
 ```lua
 server_script 'server/custom/nodes/tablet_start.lua'
