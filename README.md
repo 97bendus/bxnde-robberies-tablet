@@ -42,9 +42,9 @@ ensure bxnde-robberies-tablet
 
 If you want the tablet to require an inventory item (`Config.TabletItem`), add it to your inventory using the correct method below.
 
-### ESX (Standard Inventory)
+### ESX inventory
 
-Run this SQL on your database:
+Run this `SQL` on your database:
 
 ```sql
 INSERT INTO `items` (`name`, `label`, `weight`, `rare`, `can_remove`, `description`)
@@ -52,7 +52,7 @@ VALUES ('robbery_tablet', 'Robbery Tablet', 1000, 1, 1,
         'A specialized tablet used to view, manage and launch available robberies');
 ```
 
-### ox_inventory
+### OX inventory
 
 Add to `ox_inventory/data/items.lua`:
 
@@ -65,10 +65,9 @@ Add to `ox_inventory/data/items.lua`:
     description = 'A specialized tablet used to view, manage and launch available robberies',
 },
 ```
+Place the `robbery_tablet.png` in `ox_inventory/web/images/`.
 
-Place the icon (`robbery_tablet.png`) in `ox_inventory/web/images/`.
-
-### qs-inventory (QBCore / QBox)
+### QS inventory
 
 Add to `qs-inventory/shared/items.lua`:
 
@@ -86,10 +85,9 @@ Add to `qs-inventory/shared/items.lua`:
     ["description"] = "A specialized tablet used to view, manage and launch available robberies"
 },
 ```
+Place the `robbery_tablet.png` in `qs-inventory/web/dist/images/`.
 
-Place the icon in `qs-inventory/web/dist/images/`.
-
-### qb-inventory / QBCore (Standard)
+### QB inventory
 
 Add to `qb-core/shared/items.lua`:
 
@@ -107,14 +105,7 @@ Add to `qb-core/shared/items.lua`:
     ['description'] = 'A specialized tablet used to view, manage and launch available robberies'
 },
 ```
-
-Place the icon in `qb-inventory/html/images/`.
-
-### QS Inventory (Standalone / Other Frameworks)
-
-Use the same structure as qs-inventory above. The file location is `qs-inventory/shared/items.lua` .
-
-> **Note for ESX + qs-inventory:** qs-inventory on ESX reads items from the database `items` table, not from `shared/items.lua`. Use the ESX SQL method above .
+Place the `robbery_tablet.png` in `qb-inventory/html/images/`.
 
 ---
 
