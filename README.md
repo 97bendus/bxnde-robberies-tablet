@@ -197,7 +197,7 @@ Robbery data is cached for `Config.CacheSeconds` (default configurable).
 
 | Problem | Check |
 |---------|-------|
-| Tablet won't open | F8 console, command/key config, `web/build/index.html` exists |
+| Tablet won't open | F8 console, command/key config, `web/index.html` exists |
 | Robbery list empty | oxmysql running, table name, column names in config |
 | Robberies always available | Cooldown table, `expires_at` format (Unix seconds) |
 | Item not recognised | `Config.Inventory` setting, exact item name in your inventory |
@@ -237,7 +237,7 @@ TriggerClientEvent('qs-robberies:notify', source, 'The vault is open', 'success'
 
 ## UI Customization
 
-The loaded file is `web/build/index.html`. Source files are under `web/src`. If you modify the source, rebuild from the `web/` folder with the package scripts and ensure the built file is included in the resource.
+The loaded file is `web/index.html`. Source files are under `web/src`. If you modify the source, rebuild from the `web/` folder with the package scripts and ensure the built file is included in the resource.
 
 ---
 
